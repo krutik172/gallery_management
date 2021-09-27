@@ -1,0 +1,14 @@
+<h1>Gallery</h1>
+
+<% @gallery.each do |gallery| %>
+
+ <a href="/galleries/<%= gallery.id %>">
+        <h2><%=gallery.title%></h2>
+
+    </a>
+   
+    
+   <%= image_tag gallery.image.url %>
+<% end %>
+
+<%= link_to "New Gallery", new_gallery_path %>
