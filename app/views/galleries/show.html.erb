@@ -1,7 +1,8 @@
-
+<h1><%=@gallery.title%></h1>
  <%= image_tag @gallery.image.url %>
-<%= link_to "edit Gallery", edit_gallery_path(@gallery) %>
-  <%= link_to "DELETE",gallery_path(@gallery),
+ <br/>
+<%= link_to "EDIT", edit_gallery_path(@gallery) %>| 
+  <%= link_to "DELETE",gallery_path(@gallery), 
             method: :delete,
-            data:{confirm:"ARE YOU SURE?"}%>
-<%= link_to "Home", galleries_path %>
+            data:{confirm:"ARE YOU SURE?"}%> |
+<%= link_to "HOME", galleries_path %>
