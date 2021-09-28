@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+ body{
+     margin-top: 60px;
+ }
+#welcomeuser{
+    margin-top: 15px;
+}
+.imageindex{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px 20px 30px 10px
+}
+
+.indexbody{
+    margin-top: -46px;
+}
+
+.imagebox{
+    margin: 10px 10px 10px 10px;
+    border: 1px solid rgb(209, 200, 200);
+    border-radius: 20px;
+    width: 350px;
+    /* position: relative;
+    float: left; */
+    margin-right: 70px;
+    margin-left:20px 
+}
+
+.container{
+    width: 1320px
+}
+
+.card-title{
+    font-size: 30px;
+    margin: 20px 20px 20px 20px;
+    border-bottom: 1px solid rgb(209, 200, 200);
+}
+
+.indexbtn{
+    margin-left: 195px;
+    margin-top: -80px;
+}
+
+.imageshow{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 0px 20px 20px 10px
+}
+
+.showlinks{
+    font-size: 20px;
+}

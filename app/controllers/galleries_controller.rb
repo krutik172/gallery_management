@@ -1,10 +1,12 @@
 class GalleriesController < ApplicationController
+    before_action :authenticate_user!
     def index
         @gallery = Gallery.all
     end
 
     def show
         @gallery = Gallery.find(params[:id])
+        @user=@gallery.user
     end
 
     def new
@@ -12,7 +14,8 @@ class GalleriesController < ApplicationController
     end
 
     def create
-        @gallery = Gallery.new(gallery_params)
+        # @gallery = Gallery.new(gallery_params)
+        @gallery = current_user.galleries.build(gallery_params)
 
         if @gallery.save
             redirect_to @gallery
@@ -41,6 +44,7 @@ class GalleriesController < ApplicationController
         redirect_to root_path
     end
 
+  
     private
 
     def gallery_params

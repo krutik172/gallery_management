@@ -1,14 +1,27 @@
-<h1>Gallery</h1>
+<div class="indexbody container">
+ <div class="row">
+ <h1 class="col-md-12" style="margin-left: 12px" >My Gallery</h1>
+</div>
+  <%= link_to "New Image", new_gallery_path, class: "btn btn-primary indexbtn"%>
 
+<div class="row">
 <% @gallery.each do |gallery| %>
-
+ <div class="imagebox col-md-6 col-lg-4">
+ <p class="card-title"><%= gallery.user.name %>:</p>
+ <div class="card-body">
  <a href="/galleries/<%= gallery.id %>">
-        <%= image_tag gallery.image.url %>
-
+        <%= image_tag gallery.image.url, class: "imageindex card-img" %>
+        
     </a>
-   
     
-  
+</div>
+
+</div>
+
 <% end %>
 
-<%= link_to "New Gallery", new_gallery_path %>
+
+<br/>
+</div>
+
+

@@ -1,8 +1,23 @@
-<h1><%=@gallery.title%></h1>
- <%= image_tag @gallery.image.url %>
- <br/>
-<%= link_to "EDIT", edit_gallery_path(@gallery) %>| 
-  <%= link_to "DELETE",gallery_path(@gallery), 
-            method: :delete,
-            data:{confirm:"ARE YOU SURE?"}%> |
-<%= link_to "HOME", galleries_path %>
+<div class="container-fluid text-center">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1><%=@gallery.title%></h1>
+            <p>by <%=@gallery.user.name%></p>
+            <%= image_tag @gallery.image.url, class: "imageshow" %>
+
+        </div>
+    </div>
+<br/>
+
+<div class="row">
+    <div class="col-md-12 showlinks">
+        <%= link_to "EDIT", edit_gallery_path(@gallery) %> | 
+        <%= link_to "DELETE",gallery_path(@gallery), 
+                    method: :delete,
+                    data:{confirm:"ARE YOU SURE?"}%> |
+        <%= link_to "HOME", galleries_path %>
+    </div>
+
+</div>
+

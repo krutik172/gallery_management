@@ -1,0 +1,6 @@
+<h1 style="margin-left: 20px"><%= @user.name %>'s Gallery</h1>
+
+<%@user.galleries.each do |gallery| %>
+<%= image_tag gallery.image.url , class: "imageindex"%>
+<%end%>
+
