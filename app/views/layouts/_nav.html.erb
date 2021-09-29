@@ -20,12 +20,17 @@
        
         <li><a href="/galleries/new">Add a Image <span class="sr-only">(current)</span></a></li>
 
+        <% if user_signed_in? %>
+        <li><a href="/users/<%= current_user.id %>">My Gallery</a></li>
+        <% end %>
+
     </ul>
      <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-          <li id="welcomeuser"><%= "Hi, #{current_user.email}" %></li>
+          <li id="welcomeuser"><%= "Hi, #{current_user.name}" %></li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-           <li><%= link_to "Edit", edit_user_registration_path %></li>
+          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+         
       <% else %>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>

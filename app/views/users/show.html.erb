@@ -1,6 +1,19 @@
-<h1 style="margin-left: 20px"><%= @user.name %>'s Gallery</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="margin-left: 20px"><%= @user.name %>'s Gallery</h1>
+        </div>
+    </div>
 
-<%@user.galleries.each do |gallery| %>
-<%= image_tag gallery.image.url , class: "imageindex"%>
-<%end%>
+    <div class="row">
+            <%@user.galleries.each do |gallery| %>
+
+                <div class="imagebox col-md-12">
+                    <h2  class="card-title"><%= gallery.title %></h2>
+                    <%= image_tag gallery.image.url , class: "imageindex"%>
+                </div>
+            <%end%>
+
+    </div>
+</div>
 

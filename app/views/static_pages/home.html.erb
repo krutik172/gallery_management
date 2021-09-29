@@ -2,7 +2,7 @@
 <%if user_signed_in?%>
     <h1 class="display-1">Welcome <%= current_user.name %></h1>
    
-    <%= link_to "MY GALLERY", galleries_path, class: "btn btn-primary" %>
+    <%= link_to "GALLERIES", galleries_path, class: "btn btn-primary" %>
 <%else%>
     <h1>Log in to view or add Images</h1>
     <%= link_to 'Sign In', new_user_session_path, class: "btn btn-primary" %>
