@@ -1,12 +1,20 @@
 <div class="container text-center">
-<%if user_signed_in?%>
-    <h1 class="display-1">Welcome <%= current_user.name %></h1>
-   
-    <%= link_to "GALLERIES", galleries_path, class: "btn btn-primary" %>
-<%else%>
-    <h1>Log in to view or add Images</h1>
-    <%= link_to 'Sign In', new_user_session_path, class: "btn btn-primary" %>
-    <h1>New User Sign up</h1>
-    <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-primary" %>
-<%end%>
+
+    <%if user_signed_in?%>
+
+        <h1 style = "font-size: 60px;">Welcome <%= current_user.name %>!</h1>
+        <%= link_to "GALLERIES", galleries_path, class: "btn btn-primary" %>
+         <% if user_signed_in? %>
+             <a class="btn btn-primary" style="margin-left: 10px" href="/users/<%= current_user.id %>">MY GALLERY</a>
+        <% end %>
+
+    <%else%>
+
+        <h1>Log in to view or add Images</h1>
+        <%= link_to 'Sign In', new_user_session_path, class: "btn btn-primary btn-lg" %>
+        <h1>New User Sign up</h1>
+        <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-primary btn-lg" %>
+
+    <%end%>
+
 </div>

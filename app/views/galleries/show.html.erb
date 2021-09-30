@@ -12,6 +12,7 @@
 
 <div class="row">
     <div class="col-md-12 showlinks">
+
         <% if @gallery.user == current_user %>
             <%= link_to "EDIT", edit_gallery_path(@gallery) %> | 
             <%= link_to "DELETE",gallery_path(@gallery), 
@@ -20,6 +21,7 @@
             <%= link_to "HOME", galleries_path %> |
             <%= link_to "NEW", new_gallery_path %>
         <% end %>
+        
     </div>
 
 </div>

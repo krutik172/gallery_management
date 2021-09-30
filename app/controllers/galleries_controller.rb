@@ -14,7 +14,6 @@ class GalleriesController < ApplicationController
     end
 
     def create
-        # @gallery = Gallery.new(gallery_params)
         @gallery = current_user.galleries.build(gallery_params)
 
         if @gallery.save
@@ -27,10 +26,10 @@ class GalleriesController < ApplicationController
     def edit
         @gallery = Gallery.find(params[:id])
     end
-
+    
     def update
-       
         @gallery = Gallery.find(params[:id])
+
         if @gallery.update(gallery_params)
             redirect_to @gallery
         else
