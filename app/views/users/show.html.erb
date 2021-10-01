@@ -10,7 +10,7 @@
 
                 <div class="imagebox col-md-12">
                     <h2  class="card-title"><%= gallery.title %></h2>
-                    <%= image_tag gallery.image.url , class: "imageindex"%>
+                    <%= image_tag gallery.image.url(:thumb) , class: "imagegallery"%>
                 </div>
             <%end%>
 

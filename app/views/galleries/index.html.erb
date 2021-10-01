@@ -11,8 +11,8 @@
             <p class="card-title"><%= gallery.title %>:</p>
 
         
-            <a href="/galleries/<%= gallery.id %>">
-                <%= image_tag gallery.image.url, class: "imageindex card-img" %>
+            <a class="imageindex card-img" href="/galleries/<%= gallery.id %>">
+                <%= image_tag gallery.image.url(:thumb) if gallery.image_url %>
             </a>    
             <p class="footer">By <%= gallery.user.name %></p>
         
