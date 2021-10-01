@@ -1,4 +1,4 @@
-<div class="container text-center">
+<div class="container text-center jumbotron">
 
     <%if user_signed_in?%>
 
@@ -9,10 +9,10 @@
         <% end %>
 
     <%else%>
-
-        <h1>Log in to view or add Images</h1>
+    
+        <h1 style="font-size: 50px;">Log in to view or add Images</h1>
         <%= link_to 'Sign In', new_user_session_path, class: "btn btn-primary btn-lg" %>
-        <h1>New User Sign up</h1>
+        <h1 style="font-size: 50px;">New user? Sign up</h1>
         <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-primary btn-lg" %>
 
     <%end%>
