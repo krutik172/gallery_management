@@ -1,0 +1,32 @@
+
+Testing Rails Applications :  Rspec and unit test :
+Why Write Tests for your Rails Applications?
+Introduction to Testing
+The Test Environment
+Rails meets Minitest
+Available Assertions
+Rails Specific Assertions
+The Rails Test Runner
+Parallel Testing
+
+
+
+Practical's based on popular gems 
+Devise 
+Pundit
+Active admin
+Exercises: More interact with gems and create demo app 
+
+
+Active Storage Overview
+
+
+Deployment with Heroku 
+
+
+Gallery management
+- Create a demo for the galary management
+- Use DEVISE gem for login/signup. Use email verification process.
+- Use paperclip/carrierware for image processing
+- Each logged user must have own galary
+- Use validation whatever needed

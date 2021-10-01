@@ -18,10 +18,12 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg png)
   end
 
+  
+
   version :thumb do
     process :resize_to_fill => [300, 250]
     process :convert => 'jpg'
- end
+  end
   
  version :cover  do
     process :resize_to_fit => [350, 350]
