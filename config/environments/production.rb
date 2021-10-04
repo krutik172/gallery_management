@@ -129,7 +129,7 @@ Rails.application.configure do
   :password =>  ENV['SENDGRID_API_KEY'], # This is the secret sendgrid API key which was issued during API key creation
   :domain => 'fierce-forest-14450.herokuapp.com',
   :address => 'smtp.sendgrid.net',
-  :port => 587,
+  :port => '587',
   :authentication => :plain,
   :enable_starttls_auto => true
 }

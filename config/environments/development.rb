@@ -76,16 +76,16 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.perform_deliveries = true
+  
 
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'], # This is the string literal 'apikey', NOT the ID of your API key
     :password =>  ENV['SENDGRID_API_KEY'], # This is the secret sendgrid API key which was issued during API key creation
     :domain => 'fierce-forest-14450.herokuapp.com',
     :address => 'smtp.sendgrid.net',
-    :port => 587,
+    :port => '587',
     :authentication => :plain,
     :enable_starttls_auto => true
   }
-
+  config.action_mailer.perform_deliveries = true
 end
