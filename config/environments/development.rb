@@ -75,5 +75,25 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+
+  config.action_mailer.perform_deliveries = true
+
+  # config.action_mailer.smtp_settings = {
+  #   user_name:      ENV['SENDMAIL_USERNAME'],
+  #   password:       ENV['SENDMAIL_PASSWORD'],
+  #   domain:         ENV['MAIL_HOST'],
+  #   address:       'smtp.gmail.com',
+  #   port:          '587',
+  #   authentication: :plain,
+  #   enable_starttls_auto: true
+  # }
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.sendgrid.net",
+    :port                 => 587,
+    :domain               => "sendgrid.com",   
+    :user_name => 'kthaker17@gmail.com', # This is the string literal 'apikey', NOT the ID of your API key
+    :password => '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',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  
+}
 end
