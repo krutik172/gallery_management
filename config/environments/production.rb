@@ -120,7 +120,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = '<your heroku app>.herokuapp.com'
+  host = 'fierce-forest-14450.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   config.action_mailer.perform_deliveries = true
 
