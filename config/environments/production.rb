@@ -122,16 +122,16 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   host = '<your heroku app>.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
-  
-  ActionMailer::Base.smtp_settings = {
-  :address => 'smtp.sendgrid.net',
-  :port => '587',
-  :authentication => :plain,
-  :user_name => 'kthaker17@gmail.com', # This is the string literal 'apikey', NOT the ID of your API key
-  :password => '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',
-  :domain => 'heroku.com',
-  :enable_starttls_auto => true
-  }
+  config.action_mailer.perform_deliveries = true
+  # ActionMailer::Base.smtp_settings = {
+  # :address => 'smtp.sendgrid.net',
+  # :port => '587',
+  # :authentication => :plain,
+  # :user_name => 'kthaker17@gmail.com', # This is the string literal 'apikey', NOT the ID of your API key
+  # :password => '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',
+  # :domain => 'heroku.com',
+  # :enable_starttls_auto => true
+  # }
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
