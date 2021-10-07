@@ -25,6 +25,7 @@
       <% end %>
 
     </ul>
+    
      <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
           <li id="welcomeuser"><%= "Hi, #{current_user.name}" %></li>
@@ -36,8 +37,9 @@
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
 
       <% end %>
+      
     </ul>
-     
+     <%= render "gallery_search/new_search" %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

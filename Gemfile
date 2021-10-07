@@ -21,7 +21,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'carrierwave', '~> 2.0'
@@ -29,10 +30,11 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'mini_magick'
 gem 'devise'
 gem 'carrierwave-imageoptimizer'
-
+gem 'progress_bar'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+ # optional pre-packaged Solr distribution for use in development. Not for use in production.
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
