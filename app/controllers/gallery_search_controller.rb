@@ -7,7 +7,6 @@ class GallerySearchController < ApplicationController
 
     def search_galleries
     
-        
         @search =  Gallery.search do 
             fulltext search_params[:title] 
         end

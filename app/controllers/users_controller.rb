@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
-# puts "SENDGRID_USERNAME: #{ENV['SENDGRID_USERNAME']}"
-# puts "SENDGRID_API_KEY: #{ENV['SENDGRID_API_KEY']}"
+
 
     def index
-    
+        @user=User.all
+        respond_to do |format|
+            format.html
+            format.csv { send_data @user.to_csv, filename: "users-#{Date.today}.csv" }
+        end
     end
 
     def show

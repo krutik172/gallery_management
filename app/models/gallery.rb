@@ -14,4 +14,6 @@ class Gallery < ApplicationRecord
         def image_size_validation
             errors[:image] << "should be less than 2MB" if image.size > 2.0.megabytes
         end
+
+        
 end

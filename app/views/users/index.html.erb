@@ -1,0 +1,11 @@
+<div class="container">
+    <%@user.each do |users|%>
+
+        <h1><%= users.name %></h1>
+        <li><%= users.email %></h1>
+      
+    <%end%>
+    <br/>
+    <br/>
+    <a href="/users.csv"><button class="btn btn-success">export all</button></a>
+</div>
