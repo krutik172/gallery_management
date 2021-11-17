@@ -41,7 +41,13 @@
       <% end %>
       
     </ul>
-     <%= render "gallery_search/new_search" %>
+  <form action="/galleries" accept-charset="UTF-8" method="get" class="form-inline searchbox">
+
+    <input type="text" name="query" id="query" placeholder="Enter gallery title to search" class="form-control">
+    <input type="submit" name="commit" value="Search" data-disable-with="Search" class="btn btn-primary">
+
+  </form>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

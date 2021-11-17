@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-    before_action :configure_permitted_parameters, if: :devise_controller?
+     before_action :configure_permitted_parameters, if: :devise_controller?
+     include Pundit
+     rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
      protected
 
@@ -10,10 +12,15 @@ class ApplicationController < ActionController::Base
           end
 
         
-
+  
           def authenticate_admin_user!
-               unless current_user.admin == true
+               unless current_user.admin == true 
                     redirect_to galleries_path
                end
+          end
+
+          def user_not_authorized
+               flash[:danger]="Access Deny"
+               redirect_to galleries_path
           end
 end

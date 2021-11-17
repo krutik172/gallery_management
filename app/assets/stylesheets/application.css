@@ -14,7 +14,7 @@
  *= require_self
  */
  body{
-     margin-top: 60px;
+     margin-top: 100px;
  }
 #welcomeuser{
     margin-top: 15px;
@@ -43,7 +43,7 @@
 } 
 
 .card-title{
-    font-size: 30px;
+    font-size: 25px;
     margin: 20px 20px 20px 20px;
     border-bottom: 1px solid rgb(209, 200, 200);
     width: 281px;
@@ -78,5 +78,10 @@
 
 .searchbox{
     margin-top: 8px;
-  
+ 
+}
+
+
+.flashmessage{
+    margin-top: -40px;
 }
