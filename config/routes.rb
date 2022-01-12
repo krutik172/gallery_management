@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :users, only: [:index,:show]
  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :galleries 
+  resources :galleries do
+    resources :likes
+  end
   root 'static_pages#home' 
   get '/home', to: 'static_pages#home' 
   get '/gallery', to: 'galleries#gallery'
@@ -18,4 +20,6 @@ Rails.application.routes.draw do
   post '/search_galleries', to: 'gallery_search#search_galleries', as:'search_galleries'
   get '/search_box', to: 'search#search_box', as:'search_box'
   post '/showgalleries', to: 'search#showgalleries', as:'showgalleries'
+  
+
 end

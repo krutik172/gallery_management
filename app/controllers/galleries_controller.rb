@@ -2,9 +2,9 @@ class GalleriesController < ApplicationController
     before_action :authenticate_user!
     def index
         if params[:query].present?
-            @gallery = Gallery.search(params[:query])
+            @gallery = Gallery.search(params[:query]).includes(:user)
         else
-            @gallery = Gallery.all
+            @gallery = Gallery.includes(:user)
         end
        
     end

@@ -18,6 +18,10 @@ module GalleryManagement
         origins '*'
         resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
       end
+      
+    end
+    config.generators do |g|
+      g.orm :active_record
     end
 
     # Configuration for the application, engines, and railties goes here.

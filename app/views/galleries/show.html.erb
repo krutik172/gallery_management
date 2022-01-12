@@ -5,7 +5,19 @@
             <h1><%=@gallery.title%></h1>
             <p>by <%=@gallery.user.name%></p>
             <%= image_tag @gallery.image.url(:cover), class: "imageshow" %>
+            
+            <% pre_like = @gallery.likes.find { |like| like.user_id == current_user.id} %>
+            <% if pre_like %>
+                <%= button_to 'Unlike', gallery_like_path(@gallery, pre_like), method: :delete, class: "btn btn-lg btn-danger" %>
+            <% else %>
+                <%= button_to 'Like', gallery_likes_path(@gallery), method: :post, class: "btn btn-lg btn-primary" %>
+            <% end %>
+            <br/>
 
+            <p><%= @gallery.likes.count %> <%= (@gallery.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+
+            
+            
         </div>
     </div>
 <br/>

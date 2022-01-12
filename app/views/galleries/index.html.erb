@@ -16,7 +16,7 @@
                 <%= image_tag gallery.image.url(:thumb) if gallery.image_url %>
             </a>    
             <p class="footer">By <%= gallery.user.name %></p>
-        
+        <p class="footer"><%= gallery.likes.count %> <%= (gallery.likes.count) == 1 ? 'Like' : 'Likes'%></p>
         </div>
     <% end %>
 </div>

@@ -39,6 +39,7 @@ gem 'carrierwave-imageoptimizer'
 gem 'progress_bar'
 gem 'rspec', '~> 3.10'
 gem 'pg_search'
+gem 'bullet'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

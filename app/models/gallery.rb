@@ -1,6 +1,7 @@
 class Gallery < ApplicationRecord
     include PgSearch::Model
     belongs_to :user
+    has_many :likes, dependent: :destroy
     mount_uploader :image, ImageUploader
     validate :image_size_validation
     validates :image, presence: true
@@ -11,6 +12,7 @@ class Gallery < ApplicationRecord
     # searchable do
     #     text :title,:image, :user_id
     # end
+    
     
 
     private
