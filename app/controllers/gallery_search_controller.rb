@@ -7,11 +7,11 @@ class GallerySearchController < ApplicationController
 
     def search_galleries
     
-        @search =  Gallery.solr_search do 
-            fulltext search_params[:title] 
-        end
+        # @search =  Gallery.solr_search do 
+        #     fulltext search_params[:title] 
+        # end
         
-        @gallery = @search.results
+        # @gallery = @search.results
     end
 
 
